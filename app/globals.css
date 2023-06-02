@@ -16,12 +16,8 @@
   }
 }
 
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  background: radial-gradient(50% 50% at 50% 50%, #082f49 0%, rgba(20, 22, 57, 0.91) 100%);
 }
