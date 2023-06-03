@@ -8,7 +8,7 @@ export default function Home() {
         <div>
           <h1 className="text-4xl mb-4">Anthony Matignon</h1>
           <h2 className="text-3xl">Développeur Symfony / Vue</h2>
-          <div className="flex flex-col gap-2 mt-36">
+          <div className="flex flex-col gap-2 mt-32">
             <div>
               <a
                 href="https://www.linkedin.com/in/anthonymatignon/"
@@ -32,7 +32,7 @@ export default function Home() {
         <div className="flex flex-col gap-4 justify-between text-[#DEDEDE]">
           <p>
             Depuis 8 ans, je conçois et développe des sites internet, des
-            applications, des APIs. Passionnée depuis très jeunes par les
+            applications, des APIs. Passionné depuis très jeunes par les
             technologies web, j’ai appris les fondamentaux des langage de
             programmation.
           </p>
@@ -42,9 +42,9 @@ export default function Home() {
             front ou back.
           </p>
           <p>
-            J’ai récemment commencé le développement 3D WebGL avec Three.js mais
-            j’ai aussi beaucoup étudié le design d’expérience utilisateur (UX)
-            en faisant une formation.
+            J’ai récemment commencé le développement 3D WebGL avec Three.js et
+            aussi beaucoup étudié le design d’expérience utilisateur (UX)
+            en faisant une formation à l'école des Gobelins à Paris.
           </p>
           <p>
             Je suis toujours a la recherche de nouvelles expériences, que ce
@@ -54,6 +54,9 @@ export default function Home() {
       </div>
       <ExperienceSection />
       <ProjectSection />
+      <footer className="container mx-auto my-24 text-[#dedede] text-center text-sm">
+        Site réalisé sous Next.js, TailwindCSS. Déployé sur Vercel.
+      </footer>
     </main>
   );
 }
