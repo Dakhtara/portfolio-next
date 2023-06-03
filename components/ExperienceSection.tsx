@@ -2,9 +2,9 @@ import Experience from "./Experience";
 
 export default function ExperienceSection() {
   return (
-    <div className="my-30 max-w-2xl mx-auto">
+    <div className="my-16 md:my-32 max-w-2xl mx-auto">
       <h1 className="text-2xl">Experiences</h1>
-      <div className="mt-8 flex flex-col gap-4">
+      <div className="my-8 md:mt-8 flex flex-col gap-4">
         <Experience
           from="2021"
           to="2023"

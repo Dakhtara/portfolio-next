@@ -2,7 +2,7 @@ import Project from "./Project";
 
 export default function ProjectSection() {
   return (
-    <div className="my-36 max-w-2xl mx-auto">
+    <div className="my-18 md:my-32 max-w-2xl mx-auto">
       <h1 className="text-2xl">Projets</h1>
       <div className="mt-8 flex flex-col gap-4">
         <Project name="Afterlife">
