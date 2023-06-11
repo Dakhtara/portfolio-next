@@ -44,7 +44,7 @@ export default function Home() {
           <p>
             J’ai récemment commencé le développement 3D WebGL avec Three.js et
             aussi beaucoup étudié le design d’expérience utilisateur (UX)
-            en faisant une formation à l'école des Gobelins à Paris.
+            en faisant une formation à l&apos;école des Gobelins à Paris.
           </p>
           <p>
             Je suis toujours a la recherche de nouvelles expériences, que ce

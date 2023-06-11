@@ -27,9 +27,9 @@ export default function ExperienceSection() {
           link="https://auto-ecole.codesrousseau.fr"
         >
           <p>
-            Développement de l'application web de Codes Rousseau<br />
+            Développement de l’application web de Codes Rousseau<br />
             Migration vers Symfony du projet legacy<br/>
-            Ajout de features et création d'une API pour une application tablette.
+            Ajout de features et création d’une API pour une application tablette.
           </p>
         </Experience>
         <Experience
