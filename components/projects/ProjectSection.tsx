@@ -28,7 +28,7 @@ export default function ProjectSection() {
             nécessaire à la volé, une gestion de playlist ainsi que de musique
             favorites.
             <br />
-            Gestion de l’identification via l'API WebAuthn qui permet une
+            Gestion de l’identification via l’API WebAuthn qui permet une
             connexion des utilisateurs sans mot de passe.
           </p>
         </Project>
