@@ -11,6 +11,7 @@ export default function ExperienceSection() {
           company="Farmitoo"
           job="Développeur Fullstack Symfony JS"
           link="https://farmitoo.com"
+          technos={['Symfony', 'Svelte', 'MySQL']}
         >
           <p>
             Développement du site internet, gestion de synchro des stocks et
@@ -25,6 +26,7 @@ export default function ExperienceSection() {
           company="Codes Roussseau"
           job="Développeur FullStack"
           link="https://auto-ecole.codesrousseau.fr"
+          technos={['Symfony', 'VueJS', 'MariaDB']}
         >
           <p>
             Développement de l’application web de Codes Rousseau<br />
@@ -38,6 +40,7 @@ export default function ExperienceSection() {
         company="Digital Garden"
         job="Développeur FullStack Symfony"
         link="https://www.digitalgarden.fr"
+        technos={['Symfony', 'VueJS', 'MySQL']}
         >
             <p>
                 Agence web de création de sites internet.<br/>
@@ -50,7 +53,8 @@ export default function ExperienceSection() {
             company="37Deux"
             job="Développeur Symfony"
             link="https://37deux.com"
-        >
+            technos={['Symfony', 'ElasticSearch', 'VueJS']}
+            >
             <p>
                 Création de sites internet pour divers client sous Symfony.<br/>
                 Gestion de produits, de commandes, de stock, etc.

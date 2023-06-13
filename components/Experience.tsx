@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ReactElement } from "react";
-import ExternalLink from "./icons/ExternalLink";
+import ExternalLink from "./icons/ExternalLinkIcon";
+import LabelTechno from "./macro/LabelTechno";
 
 export type ExperienceProps = {
   company: string;
@@ -9,6 +10,7 @@ export type ExperienceProps = {
   from: string;
   to: string;
   link?: string;
+  technos?: string[];
 };
 
 function WithLink({link, children}: {link?: string, children: ReactElement}) {
@@ -33,7 +35,8 @@ export default function Experience({
   children,
   from,
   to,
-  link
+  link,
+  technos,
 }: ExperienceProps) {
   return (
     <WithLink link={link}>
@@ -50,6 +53,11 @@ export default function Experience({
         </div>
         <div className="text-[#CECECE]">
         {children}
+        </div>
+        <div className="flex gap-2">
+          {technos?.map((techno) => (
+            <LabelTechno techno={techno} />
+          ))}
         </div>
       </div>
     </div>

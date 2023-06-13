@@ -5,7 +5,7 @@ export default function ProjectSection() {
     <div className="my-18 md:my-32 max-w-2xl mx-auto">
       <h1 className="text-2xl">Projets</h1>
       <div className="mt-8 flex flex-col gap-4">
-        <Project name="Afterlife">
+        <Project name="Afterlife" technos={["ThreeJS", "VueJS", "TailwindCSS", "Typescript"]}>
           <p>
             Afterlife est un label de musique electronique.
             <br />
@@ -17,7 +17,7 @@ export default function ProjectSection() {
             animations en 3D.
           </p>
         </Project>
-        <Project name="Lecteur de musique">
+        <Project name="Lecteur de musique" technos={["WebAuthn", "NodeJS","VueJS"]}>
           <p>
             Il s’agit d’un projet personnel créé de zéro.
             <br />
@@ -32,7 +32,7 @@ export default function ProjectSection() {
             connexion des utilisateurs sans mot de passe.
           </p>
         </Project>
-        <Project name="Croix Rouge Minutis">
+        <Project name="Croix Rouge Minutis" technos={["Symfony"]}>
           <p>
             Pendant le confinement, j’ai eu l’occasion de travailler sur un
             projet pour la Croix Rouge.

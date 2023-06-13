@@ -1,4 +1,5 @@
 import ExperienceSection from "@/components/ExperienceSection";
+import ExternalLink from "@/components/macro/ExternalLink";
 import ProjectSection from "@/components/projects/ProjectSection";
 
 export default function Home() {
@@ -10,22 +11,18 @@ export default function Home() {
           <h2 className="text-3xl text-center md:text-left">Développeur Symfony / Vue</h2>
           <div className="mx-8 md:mx-0 grid grid-cols-3 md:flex md:flex-col gap-2 mt-8 md:mt-32">
             <div>
-              <a
-                href="https://www.linkedin.com/in/anthonymatignon/"
-                target="_blank"
-              >
-                LinkedIn
-              </a>
+              <ExternalLink href="https://www.linkedin.com/in/anthonymatignon/"
+                target="_blank">LinkedIn</ExternalLink>
             </div>
             <div>
-              <a href="https://github.com/Dakhtara" target="_blank">
+              <ExternalLink href="https://github.com/Dakhtara" target="_blank">
                 Github
-              </a>
+              </ExternalLink>
             </div>
             <div>
-              <a href="https://www.instagram.com/pwittie" target="_blank">
+              <ExternalLink href="https://www.instagram.com/pwittie" target="_blank">
                 Instagram
-              </a>
+              </ExternalLink>
             </div>
           </div>
         </div>
