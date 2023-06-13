@@ -9,25 +9,9 @@ export type ExperienceProps = {
   children: ReactElement;
   from: string;
   to: string;
-  link?: string;
+  link: string;
   technos?: string[];
 };
-
-function WithLink({link, children}: {link?: string, children: ReactElement}) {
-    if (link !== undefined) {
-        return (
-            <Link href={link} target="_blank">
-                {children}
-            </Link>
-        )
-    } else {
-        return (
-            <>
-                {children}
-            </>
-        )
-    }
-}
 
 export default function Experience({
   job,
@@ -39,7 +23,7 @@ export default function Experience({
   technos,
 }: ExperienceProps) {
   return (
-    <WithLink link={link}>
+    <Link href={link} target="_blank">
     <div className="grid grid-rows-[min-content_1fr] md:grid-cols-[min-content_1fr] gap-2 md:gap-8 cursor-pointer group hover:bg-sky-900/50 rounded-lg px-4 py-2 transition-all">
       <p className="whitespace-nowrap">
         {from} - {to}
@@ -61,6 +45,6 @@ export default function Experience({
         </div>
       </div>
     </div>
-    </WithLink>
+    </Link>
     );
 }
