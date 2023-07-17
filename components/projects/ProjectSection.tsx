@@ -1,11 +1,23 @@
-import Project from "./Project";
+"use client";
 
+import Project from "./Project";
+import { motion } from "framer-motion";
 export default function ProjectSection() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  }
+
   return (
     <div className="my-18 md:my-32 max-w-2xl mx-auto">
       <h1 className="text-2xl">Projets</h1>
-      <div className="mt-8 flex flex-col gap-4">
-        <Project name="Afterlife" technos={["ThreeJS", "VueJS", "TailwindCSS", "Typescript"]}>
+        <motion.div className="mt-8 flex flex-col gap-4" layout viewport={{amount: .2, once: true}} variants={container}  initial="hidden" whileInView="show">
+        <Project key="afterlife" name="Afterlife" technos={["ThreeJS", "VueJS", "TailwindCSS", "Typescript"]}>
           <p>
             Afterlife est un label de musique electronique.
             <br />
@@ -17,7 +29,7 @@ export default function ProjectSection() {
             animations en 3D.
           </p>
         </Project>
-        <Project name="Lecteur de musique" technos={["WebAuthn", "NodeJS","VueJS"]}>
+        <Project key="music-player" name="Lecteur de musique" technos={["WebAuthn", "NodeJS","VueJS"]}>
           <p>
             Il s’agit d’un projet personnel créé de zéro.
             <br />
@@ -32,7 +44,7 @@ export default function ProjectSection() {
             connexion des utilisateurs sans mot de passe.
           </p>
         </Project>
-        <Project name="Croix Rouge Minutis" technos={["Symfony"]}>
+        <Project key="red-cross" name="Croix Rouge Minutis" technos={["Symfony"]}>
           <p>
             Pendant le confinement, j’ai eu l’occasion de travailler sur un
             projet pour la Croix Rouge.
@@ -41,7 +53,7 @@ export default function ProjectSection() {
             la Croix Rouge.
           </p>
         </Project>
-      </div>
+        </motion.div>
     </div>
   );
 }

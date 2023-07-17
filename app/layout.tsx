@@ -1,5 +1,6 @@
+import { Footer } from '@/components/layout/Footer'
 import './globals.css'
-import { Inter, Comfortaa } from 'next/font/google'
+import { Comfortaa } from 'next/font/google'
 
 const comfortaa = Comfortaa({ subsets: ['latin'] })
 export const metadata = {
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={comfortaa.className}>{children}</body>
+      <body className={comfortaa.className}>
+        {children}
+        <Footer />
+        </body>
     </html>
   )
 }

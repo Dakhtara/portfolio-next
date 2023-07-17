@@ -1,10 +1,25 @@
+"use client";
+
 import Experience from "./Experience";
+import { motion } from "framer-motion";
 
 export default function ExperienceSection() {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3
+      }
+    }
+  }
+
   return (
     <div className="my-16 md:my-32 max-w-2xl mx-auto">
       <h1 className="text-2xl">Experiences</h1>
-      <div className="my-8 md:mt-8 flex flex-col gap-4">
+      <div>
+        <motion.div className="my-8 md:mt-8 flex flex-col gap-4" variants={container} viewport={{amount: .5, once: true}} initial="hidden" whileInView="show">
+
         <Experience
           from="2021"
           to="2023"
@@ -60,6 +75,8 @@ export default function ExperienceSection() {
                 Gestion de produits, de commandes, de stock, etc.
             </p>
         </Experience>
+        </motion.div>
+
       </div>
       
     </div>

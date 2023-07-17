@@ -1,7 +1,10 @@
+"use client";
+
 import Link from "next/link";
 import { ReactElement } from "react";
 import ExternalLink from "./icons/ExternalLinkIcon";
 import LabelTechno from "./macro/LabelTechno";
+import { motion } from "framer-motion"
 
 export type ExperienceProps = {
   company: string;
@@ -22,9 +25,17 @@ export default function Experience({
   link,
   technos,
 }: ExperienceProps) {
+  const variants = {
+    hidden: { opacity: 0, transform: "translateY(20px)" },
+    show: {
+      opacity: 1,
+      transform: "translate(0)"
+    }
+  }
   return (
+    <motion.div layout layoutId="experience" transition={{duration: .2,}} variants={variants}>
     <Link href={link} target="_blank">
-    <div className="grid grid-rows-[min-content_1fr] md:grid-cols-[min-content_1fr] gap-2 md:gap-8 cursor-pointer group hover:bg-sky-900/50 rounded-lg px-4 py-2 transition-all">
+    <div className="grid grid-rows-[min-content_1fr] md:grid-cols-[min-content_1fr] gap-2 md:gap-8 cursor-pointer group hover:bg-sky-900/50 rounded-xl px-4 py-2 transition-all">
       <p className="whitespace-nowrap">
         {from} - {to}
       </p>
@@ -39,12 +50,13 @@ export default function Experience({
         {children}
         </div>
         <div className="flex gap-2">
-          {technos?.map((techno) => (
-            <LabelTechno techno={techno} />
+          {technos?.map((techno, index) => (
+            <LabelTechno key={index+techno} techno={techno} />
           ))}
         </div>
       </div>
     </div>
     </Link>
+    </motion.div>
     );
 }
